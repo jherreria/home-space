@@ -43,6 +43,8 @@ The experience uses small missions, visible progress, surprise keepsakes, and fr
 - `demo/assets.js` — original SVG illustrations and icons
 - `demo/styles.css` and `demo/details.css` — responsive styling
 - `demo/server.mjs` — development server
+- `demo/build.mjs` — static production build
+- `vercel.json` and `demo/vercel.json` — deployment settings for either project root
 
 The PRD retains its original filename so existing links remain valid; its product name is Home Space.
 
@@ -55,6 +57,23 @@ npm run check --prefix demo
 ```
 
 This checks JavaScript syntax. The demo guide records the browser walkthroughs and export checks completed during development.
+
+## Deploy to Vercel
+
+Home Space runs entirely in the browser. Vercel serves the production build as static files; `demo/server.mjs` is only for local development.
+
+Import this GitHub repository and select **Other** as the Framework Preset. The included configuration supports either the repository root (`.`) or `demo` as the Vercel Root Directory. Each configuration sets the matching build command and output directory, disables dependency installation, and overrides framework detection. No environment variables are required.
+
+The build publishes only `index.html`, `app.js`, `assets.js`, `data.js`, `styles.css`, and `details.css`. The local server, PRD, and documentation are excluded from the deployment output.
+
+To run the production build locally:
+
+```sh
+npm run check --prefix demo
+npm run build --prefix demo
+```
+
+The output is `demo/dist/`, which is ignored by Git. To apply a configuration fix, deploy the latest Git commit; redeploying an older deployment will reuse that older commit. The build output is served directly, so this demo does not need server functions or catch-all route rewrites.
 
 ## License
 

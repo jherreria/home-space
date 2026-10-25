@@ -5,6 +5,8 @@ node_modules/
 .env.*
 !.env.example
 coverage/
+.vercel/
+/demo/dist/
 
 # Local workspace marker and historical screenshots from the earlier branding.
 /hello.txt
