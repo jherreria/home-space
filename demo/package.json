@@ -1,0 +1,12 @@
+{
+  "name": "home-space-hackathon-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A no-login, mobile-first Home Space interactive hackathon demo",
+  "scripts": {
+    "start": "node server.mjs",
+    "demo": "node server.mjs",
+    "check": "node --check app.js && node --check assets.js && node --check data.js && node --check server.mjs"
+  }
+}

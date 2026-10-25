@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f7f2">
+  <meta name="description" content="Make room for good things. A mobile-first decluttering demo with delightful small wins.">
+  <title>Home Space — Make room for good things</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='14' fill='%23b4a0e7'/%3E%3Cpath d='M10 24L24 12l14 12v14H10z' fill='%23f8f7f2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/details.css">
+</head>
+<body>
+  <main class="demo-stage">
+    <aside class="intro-panel">
+      <div class="desktop-brand"><span class="logo-flower">✳</span> home space</div>
+      <div class="eyebrow desktop-eyebrow">A LITTLE LESS. A LOT BETTER.</div>
+      <h1 class="intro-title">Make space<br>for <em>living.</em></h1>
+      <p class="intro-copy">Your things have stories.<br>Let’s give them a little direction.</p>
+      <div class="desktop-chips"><span>Find your stuff</span><span>Find its next chapter</span></div>
+      <div class="demo-note"><span class="live-dot"></span> Interactive hackathon demo<br><small>No sign-up. All the little wins.</small></div>
+      <p class="desktop-footnote">MADE FOR YOUR PHONE.<br>AND THE LIFE OUTSIDE IT.</p>
+    </aside>
+    <section class="phone-column" aria-label="Mobile phone simulator">
+      <div class="device-label"><span class="live-dot"></span> PHONE SIMULATOR <span>390 × 844</span></div>
+      <div class="phone-shell">
+        <div class="phone-status"><span>9:41</span><div class="dynamic-island"></div><span class="status-icons"><svg viewBox="0 0 58 15" width="58" height="15" aria-hidden="true"><path d="M1 11v3h3v-3zm5-3v6h3V8zm5-3v9h3V5zm5-3v12h3V2z" fill="currentColor"/><path d="M25 5q7-6 14 0m-11 3q4-4 8 0m-5 3q1-1 2 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="43" y="3" width="12" height="9" rx="2" fill="none" stroke="currentColor"/><rect x="45" y="5" width="8" height="5" rx="1" fill="currentColor"/><path d="M57 6v3" stroke="currentColor"/></svg></span></div>
+        <div id="screen" class="screen" tabindex="-1"></div>
+        <nav id="tabbar" class="tabbar" aria-label="Main navigation"></nav>
+        <div class="home-indicator"></div>
+        <div id="modal-root"></div>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      </div>
+      <div class="device-footer">Built for small steps. Designed for big feelings.</div>
+    </section>
+    <aside class="guide-panel">
+      <div class="guide-card">
+        <div class="small-tag">TAKE IT FOR A SPIN</div>
+        <h2 class="guide-title">A few little<br>possibilities.</h2>
+        <p class="subtle">Tap the phone, or jump into a story.</p>
+        <div class="journey-list">
+          <button data-action="journey" data-value="sprint"><span class="journey-number">01</span><span><b>One shelf. Fresh start.</b><small>A three-item declutter sprint</small></span><span>↗</span></button>
+          <button data-action="journey" data-value="capture"><span class="journey-number">02</span><span><b>Stuff meets possibility.</b><small>Scan, find a home, discover a trade</small></span><span>↗</span></button>
+          <button data-action="journey" data-value="community"><span class="journey-number">03</span><span><b>Someone’s next favorite.</b><small>Make a neighborhood connection</small></span><span>↗</span></button>
+          <button data-action="journey" data-value="map"><span class="journey-number">04</span><span><b>A place for everything.</b><small>Explore your home’s storage map</small></span><span>↗</span></button>
+          <button data-action="journey" data-value="report"><span class="journey-number">05</span><span><b>A little peace of mind.</b><small>Export an insurance inventory</small></span><span>↗</span></button>
+        </div>
+      </div>
+      <div class="demo-controls"><span>Sample home · Oakland, CA</span><button data-action="reset" aria-label="Reset demo">↻ Reset demo</button></div>
+      <p class="simulation-note">AI, valuations, people, and matches are simulated. Your demo progress stays in this browser.</p>
+    </aside>
+  </main>
+  <input type="file" id="photo-input" accept="image/*" capture="environment" hidden>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
